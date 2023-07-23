@@ -1,11 +1,17 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
 const { log } = require("console");
+const path = require("path");
 
 const app = express();
 app.use(express.static("css"));
 app.use(bodyparser.urlencoded({ extended: true }));
+
+dotenv.config({
+  path:"./data/config.env",
+})
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
@@ -20,7 +26,7 @@ app.post("/", function (req, res) {
     service: "gmail",
     auth: {
       user: "abhishekgautam94666@gmail.com",
-      pass: "",
+      pass: process.env.PASSWORD,
     },
   });
   let mailOption = {
@@ -42,11 +48,12 @@ app.post("/", function (req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.redirect('/');
+      res.send("send seccesfully");
     }
   });
 });
 
-app.listen(4000, function () {
-  console.log("server started at 4000");
+app.listen(process.env.PORT, function () {
+  console.log(`server started at ${process.env.PORT}`);
+  console.log(process.env.PASSWORD);
 });
