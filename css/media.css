@@ -27,10 +27,6 @@
     top: 0;
     left: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     /* to get the transition */
     transform: translateX(100%);
     transition: all 0.5s linear;
