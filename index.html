@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/8e44f824d0.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
           </div>
 
           <div class="rightSection">
-            <img src="css/image/img1.png" alt="">
+            <img src="/css/image/img1.png" alt="">
           </div>
         </div>
     </div>
@@ -57,7 +57,7 @@
     <div id="about" class="container">
       <h2>About Me</h2>
       <div class="profile-img">
-        <img src="css/image/Abhi_img.jpg" alt="Profile Picture">
+        <img src="/css/image/Abhi_img.jpg" alt="Profile Picture">
       </div>
       <div class="bio">
         <p>
@@ -89,57 +89,57 @@
       <h2>Skills</h2>
       <div class="skil-sec">
         <div class="skill">
-          <img src="css/image/html-5.png" alt="HTML Logo">
+          <img src="/css/image/html-5.png" alt="HTML Logo">
           <h3>HTML</h3>
         </div>
 
 
         <div class="skill">
-          <img src="css/image/css-3.png" alt="CSS Logo">
+          <img src="/css/image/css-3.png" alt="CSS Logo">
           <h3>CSS</h3>
         </div>
 
 
         <div class="skill">
-          <img src="css/image/java-script.png" alt="JavaScript Logo">
+          <img src="/css/image/java-script.png" alt="JavaScript Logo">
           <h3>JavaScript</h3>
         </div>
 
 
         <div class="skill">
-          <img src="css/image/react.png" alt="React Logo">
+          <img src="/css/image/react.png" alt="React Logo">
           <h3>React</h3>
         </div>
 
         <div class="skill">
-          <img src="css/image/nodejs.png" alt="nodejs Logo">
+          <img src="/css/image/nodejs.png" alt="nodejs Logo">
           <h3>nodeJs</h3>
         </div>
 
         <div class="skill">
-          <img src="css/image/express.png" alt="expressjs Logo">
+          <img src="/css/image/express.png" alt="expressjs Logo">
           <h3>Express</h3>
         </div>
 
         <div class="skill">
-          <img src="css/image/bootstrap.png" alt="bootstrap Logo">
+          <img src="/css/image/bootstrap.png" alt="bootstrap Logo">
           <h3>bootstrap</h3>
         </div>
 
         <div class="skill">
-          <img src="css/image/typescript.png" alt="typescript Logo">
+          <img src="/css/image/typescript.png" alt="typescript Logo">
           <h3>Typescript</h3>
         </div>
 
 
         <div class="skill">
-          <img src="css/image/next-js-logo.png" alt="nextjs  Logo">
+          <img src="/css/image/next-js-logo.png" alt="nextjs  Logo">
           <h3>nextJs</h3>
         </div>
 
 
         <div class="skill">
-          <img src="css/image/MongoDB-Logo.jpg" alt="mongodp Logo">
+          <img src="/css/image/MongoDB-Logo.jpg" alt="mongodp Logo">
           <h3>MongoDB</h3>
         </div>
 
@@ -183,7 +183,6 @@
 </body>
 
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-<script src="script.js"></script>
 <script>
   let typed = new Typed('#element', {
     strings: ['Web Developer'],
@@ -221,6 +220,28 @@
         alert("There was an error sending your message. Please try again.");
       });
   });
+
+
+
+  const menuBtn = document.querySelector('.navbar-btn');
+  const nav_header = document.querySelector("header");
+  const rm2 = document.querySelector("#rm2");
+  const rm3 = document.querySelector("#rm3");
+  const rm4 = document.querySelector("#rm4");
+
+
+  menuBtn.addEventListener('click', () => {
+    nav_header.classList.toggle("active")
+  })
+
+  const remove_active = () => {
+    nav_header.classList.remove("active");
+  }
+
+  rm2.addEventListener("click", () => remove_active());
+  rm3.addEventListener("click", () => remove_active());
+  rm4.addEventListener("click", () => remove_active());
+
 </script>
 
 </html>
