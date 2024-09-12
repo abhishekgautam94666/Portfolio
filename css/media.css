@@ -66,9 +66,15 @@
   }
 }
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 800px) {
   .rightSection {
     display: none;
   }
+  .firstSection {
+    height: 200px;
+  }
+  .leftSection {
+    font-size: 2rem;
+    margin-top: 110px;
+  }
 }
-
